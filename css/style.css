@@ -1,0 +1,83 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: "Poppins", sans-serif;
+       color: #fff;
+   }
+
+   /* Navbar */
+
+   nav {
+       position: fixed;
+       top: 0;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 1rem 3rem;
+       background: rgba(0, 0, 0, 0.5);
+       backdrop-filter: blur(6px);
+       z-index: 100;
+   }
+
+   .logo {
+       font-size: 1.8rem;
+       font-weight: 700;
+       color: #ffcc00;
+       letter-spacing: 2px;
+   }
+
+   .nav-links {
+       display: flex;
+       gap: 2rem;
+   }
+
+   .nav-links a {
+       text-decoration: none;
+       color: #fff;
+       font-weight: 500;
+       transition: color 0.3s;
+   }
+
+   .nav-links a:hover {
+       color: #ffcc00;
+   }
+
+   /* Navbar */
+
+   /* Landing Page */
+   .landing {
+       height: 90vh;
+       background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+       background-size: cover;
+       background-position: center;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+   }
+
+   .landing h1 {
+       font-size: 5rem;
+       color: #fff;
+       text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+       animation: fadeIn 2s ease;
+   }
+
+   @keyframes fadeIn {
+       from {
+           opacity: 0;
+           transform: translateY(30px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+
+   /* Landing Page */
