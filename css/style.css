@@ -5,54 +5,150 @@
    }
 
    body {
-       font-family: "Poppins", sans-serif;
-       color: #fff;
+
+       font-family: "Sriracha", sans-serif;
+       font-weight: 400;
+       font-style: normal;
    }
 
-   /* Navbar */
+   li {
+       list-style: none;
+   }
+
+   a {
+       text-decoration: none;
+   }
+
+   /*nav*/
 
    nav {
-       position: fixed;
-       top: 0;
-       width: 100%;
+       background-color: #f8f9fa;
        display: flex;
-       justify-content: space-between;
        align-items: center;
-       padding: 1rem 3rem;
-       background: rgba(0, 0, 0, 0.5);
-       backdrop-filter: blur(6px);
-       z-index: 100;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       padding: 0 3rem;
+       position: sticky;
+       top: 0;
+       z-index: 999;
+       box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.301);
    }
 
-   .logo {
-       font-size: 1.8rem;
-       font-weight: 700;
-       color: #ffcc00;
-       letter-spacing: 2px;
+   nav p {
+       color: #242424;
+       font-size: 1.3rem;
+       letter-spacing: .1rem;
+       text-transform: uppercase;
    }
 
-   .nav-links {
+   .burger {
+       background-color: rgba(255, 255, 255, 0);
+       border: 1px solid rgba(255, 255, 255, 0);
+       cursor: pointer;
+       display: none;
+       font-size: 2.2rem;
+       position: relative;
+       padding: 0;
+       outline: none;
+       height: 3rem;
+       width: 3rem;
+   }
+
+   .burger:active {
+       outline: none;
+   }
+
+   .burger .bar {
+       background-color: #242424;
+       position: absolute;
+       left: 20px;
+       transform: translate(-50%, -50%) rotate(0deg);
+       height: 3px;
+       width: 20px;
+       transition: transform 0.2s ease;
+   }
+
+   .burger .bar:first-of-type {
+       top: 40%;
+   }
+
+   .burger .bar:last-of-type {
+       top: 60%;
+   }
+
+   nav ul {
        display: flex;
-       gap: 2rem;
+       margin: 0;
+       padding: 0;
    }
 
-   .nav-links a {
-       text-decoration: none;
-       color: #fff;
-       font-weight: 500;
-       transition: color 0.3s;
+   nav ul li {
+       margin: 0 10px;
+       padding: 1rem .3rem;
+       transition: ease .3s;
    }
 
-   .nav-links a:hover {
-       color: #ffcc00;
+   nav a {
+       color: #242424;
+       position: relative;
+       font-size: 1rem;
    }
 
-   /* Navbar */
+   nav ul li:hover {
+       background-color: #ff9f68;
+       color: #f8f9fa;
+   }
 
+   @media (max-width: 1000px) {
+       nav {
+           padding: 0;
+       }
+
+       nav p {
+           margin-left: 5px;
+       }
+
+       .burger {
+           display: block;
+       }
+
+       .burger.show-x .bar:first-of-type {
+           transform: translate(-50%, 50%) rotate(225deg);
+       }
+
+       .burger.show-x .bar:last-of-type {
+           transform: translate(-50%, -150%) rotate(-225deg);
+       }
+
+       nav ul {
+           background-color: #f8f9fa;
+           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+           flex-direction: column;
+           text-align: center;
+           position: fixed;
+           top: 80px;
+           left: 10%;
+           transform: translateX(120%);
+           width: 80%;
+           transition: transform 0.3s ease-in;
+           z-index: 100;
+       }
+
+       nav ul.show {
+           transform: translateX(0);
+           background-color: #f8f9fa;
+       }
+
+       nav ul li {
+           margin: 15px;
+       }
+   }
+
+   /*end nav*/
    /* Landing Page */
    .landing {
-       height: 90vh;
-       background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+       height: 50vh;
+       background-image: url(../img/landing.jpg);
        background-size: cover;
        background-position: center;
        display: flex;
@@ -65,18 +161,16 @@
        font-size: 5rem;
        color: #fff;
        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-       animation: fadeIn 2s ease;
+       animation: slideLeft 1s ease;
    }
 
-   @keyframes fadeIn {
+   @keyframes slideLeft {
        from {
-           opacity: 0;
-           transform: translateY(30px);
+           transform: translatex(40px);
        }
 
        to {
-           opacity: 1;
-           transform: translateY(0);
+           transform: translatex(0);
        }
    }
 
