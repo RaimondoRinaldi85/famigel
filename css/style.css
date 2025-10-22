@@ -5,7 +5,6 @@
    }
 
    body {
-
        font-family: "Sriracha", sans-serif;
        font-weight: 400;
        font-style: normal;
@@ -22,7 +21,8 @@
    /*nav*/
 
    nav {
-       background-color: #f8f9fa;
+       /* background-color: #0033da; */
+       background: linear-gradient(90deg, #A8D8EA, #F0E8B7);
        display: flex;
        align-items: center;
        justify-content: space-between;
@@ -34,8 +34,12 @@
        box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.301);
    }
 
+   nav img {
+       height: 50px;
+   }
+
    nav p {
-       color: #242424;
+       color: #f7f7f7;
        font-size: 1.3rem;
        letter-spacing: .1rem;
        text-transform: uppercase;
@@ -94,9 +98,8 @@
        font-size: 1rem;
    }
 
-   nav ul li:hover {
-       background-color: #ff9f68;
-       color: #f8f9fa;
+   nav ul a li:hover {
+       color: #ff9f68;
    }
 
    @media (max-width: 1000px) {
@@ -104,8 +107,8 @@
            padding: 0;
        }
 
-       nav p {
-           margin-left: 5px;
+       nav img {
+           margin: auto;
        }
 
        .burger {
@@ -160,7 +163,6 @@
    .landing h1 {
        font-size: 5rem;
        color: #fff;
-       text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
        animation: slideLeft 1s ease;
    }
 

@@ -1,0 +1,17 @@
+:root {
+  /*  Colori principali */
+  --rosa-cipria: #F8C8DC;
+  --azzurro-polvere: #A8D8EA;
+  --verde-menta: #B8E8C8;
+  --lavanda-chiaro: #CBB7F0;
+  --giallo-crema: #FFF5BA;
+  --pesca-pastello: #FFD6A5;
+
+  /*  Colori opposti */
+  --verde-salvia-chiaro: #C8F8E4;
+  --pesca-tenue: #EAB8A8;
+  --rosa-pesca: #E8B8D8;
+  --giallo-pastello: #F0E8B7;
+  --azzurro-tenue: #BAC4FF;
+  --azzurro-grigio: #A5C4FF;
+}
